@@ -14,12 +14,11 @@ module.exports = function (app) {
     var returnUnit = convertHandler.getReturnUnit(initialUnit);
     var toString = convertHandler.toString(initialNum,initialUnit,returnNum,returnUnit);
     let responseObject = {}
-    responseObject['initNum'] = initNum
-    responseObject['initUnit'] = initUnit
+    responseObject['initNum'] = initialNumNum
+    responseObject['initUnit'] = initialUnit
     responseObject['returnNum'] = returnNum
     responseObject['returnUnit'] = returnUnit
     responseObject['string'] = toString
-
     res.json(responseObject)
   });
 };
