@@ -1,8 +1,11 @@
+let inputRegex = /[a-z]+|[^a-z]+/gi
+
 function ConvertHandler() {
-  
+
   this.getNum = function(input) {
     let result;
-    
+    // return all matched with regex in array
+    result = input.match(inputRegex)[0]
     return result;
   };
   
