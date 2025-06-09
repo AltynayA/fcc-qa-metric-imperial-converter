@@ -5,18 +5,23 @@ const ConvertHandler = require('../controllers/convertHandler.js');
 let convertHandler = new ConvertHandler();
 
 suite('Unit Tests', function(){
+    // #1
     test('Read  a whole number input', function() {
         assert.equal(convertHandler.getNum('32L'), 32);
     });
+    // #2
     test('Read a decimal number input', function() {
         assert.equal(convertHandler.getNum('3.5gal'), 3.5);
     });
+    // #3
     test('Read a fractional input', function() {
         assert.equal(convertHandler.getNum('1/2mi'), 0.5);
     });
+    // #4
     test('Read a fractional input with a decimal.', function() {
         assert.equal(convertHandler.getNum('3.6/2lbs'),1.8)
     });
+    // #5
     test('Return an error on a double-fraction', function() {
         assert.equal(convertHandler.getNum('3/5/6kg'),'invalid number');
     });
