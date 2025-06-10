@@ -11,5 +11,4 @@
 - Node.js
 - Express
 - Mocha & Chai (for testing)
-- MongoDB
 
